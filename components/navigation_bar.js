@@ -484,7 +484,7 @@ function NavBarDrawerComponent(props) {
                                         }}
                                         style={{
                                             borderBottomWidth: 3,
-                                            borderBottomColor: isActiveTab ? theme.palette.text.primary : `rgba(255, 255, 255, 0)`,
+                                            borderBottomColor: isActiveTab ? theme.palette.background.paper : `rgba(255, 255, 255, 0)`,
                                             borderStyle: "solid",
                                             borderRadius: 0,
                                             color: isActiveTab ? theme.palette.text.primary : alpha(theme.palette.text.primary, 0.7),
@@ -499,7 +499,7 @@ function NavBarDrawerComponent(props) {
                                         }}
                                     >
                                         <Typography
-                                            color={theme.palette.text.primary}
+                                            color={theme.palette.background.paper}
                                         >
                                             {item.title}
                                         </Typography>
@@ -512,21 +512,21 @@ function NavBarDrawerComponent(props) {
 
                     {/*{element}*/}
 
-                    <Tooltip title="Change theme">
-                        <IconButton
-                            onClick={props.toggleTheme}
-                            sx={{
-                                alignSelf: "right",
-                                marginLeft: "auto",
-                            }}
-                        >
-                            {props.selectedTheme === "dark" ? (
-                                <ResponsiveIcon icon={Brightness4Icon} sx={{color: theme.palette.text.primary}}/>
-                            ) : (
-                                <ResponsiveIcon icon={Brightness7Icon} sx={{color: theme.palette.text.primary}}/>
-                            )}
-                        </IconButton>
-                    </Tooltip>
+                    {/*<Tooltip title="Change theme">*/}
+                    {/*    <IconButton*/}
+                    {/*        onClick={props.toggleTheme}*/}
+                    {/*        sx={{*/}
+                    {/*            alignSelf: "right",*/}
+                    {/*            marginLeft: "auto",*/}
+                    {/*        }}*/}
+                    {/*    >*/}
+                    {/*        {props.selectedTheme === "dark" ? (*/}
+                    {/*            <ResponsiveIcon icon={Brightness4Icon} sx={{color: theme.palette.text.primary}}/>*/}
+                    {/*        ) : (*/}
+                    {/*            <ResponsiveIcon icon={Brightness7Icon} sx={{color: theme.palette.text.primary}}/>*/}
+                    {/*        )}*/}
+                    {/*    </IconButton>*/}
+                    {/*</Tooltip>*/}
                 </Toolbar>
             </AppBar>
             <Box component="nav">
