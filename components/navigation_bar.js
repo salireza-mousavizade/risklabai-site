@@ -403,7 +403,8 @@ function NavBarDrawerComponent(props) {
         <React.Fragment>
             <AppBar enableColorOnDark
                     sx={{
-                        backgroundColor: trigger ? `rgb(94, 94, 94)` : `rgba(255, 255, 255, 0)`
+                        transition: 'all 0.5s ease-in-out',
+                        backgroundColor: trigger ? theme.palette.headerColor : `rgba(255, 255, 255, 0)`
                     }}
                     elevation={0}
                     padding={0}
@@ -425,27 +426,27 @@ function NavBarDrawerComponent(props) {
                         {currentTabTitle}
                     </Typography>
 
-                    <Fade in={trigger}>
+                    <Fade in={trigger} timeout={500}>
 
-                    <Icon
-                        sx={{
-                            mr: 3,
-                            height: `calc( ${props.navBarHeight} - 5vh )`,
-                            width: `calc( 2 * (${props.navBarHeight} - 5vh) )`,
-                            display: {xs: 'none', sm: 'flex'},
-                        }}
-                    >
-                        <img style={{
-                            display: 'flex',
-                            height: 'inherit',
-                            width: 'inherit'
-                        }} src="/static/quant_econ.png"/>
-                    </Icon>
+                        <Icon
+                            sx={{
+                                mr: 3,
+                                height: `calc( ${props.navBarHeight} - 5vh )`,
+                                width: `calc( 2 * (${props.navBarHeight} - 5vh) )`,
+                                display: {xs: 'none', sm: 'flex'},
+                            }}
+                        >
+                            <img style={{
+                                display: 'flex',
+                                height: 'inherit',
+                                width: 'inherit'
+                            }} src="/static/quant_econ.png"/>
+                        </Icon>
 
                     </Fade>
 
 
-                    <Fade in={trigger}>
+                    <Fade in={trigger} timeout={500}>
                         <Typography
                             variant="h4"
                             noWrap

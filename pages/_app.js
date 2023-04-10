@@ -2,7 +2,16 @@ import '../styles/globals.css'
 import NavigationBarComponent from "../components/navigation_bar";
 import {MDXProvider} from '@mdx-js/react'
 import React, {createContext, useEffect, useReducer, useState} from "react";
-import {Box, createTheme, CssBaseline, responsiveFontSizes, ThemeProvider, Typography} from "@mui/material";
+import {
+    alpha,
+    Box, ButtonGroup,
+    createTheme,
+    CssBaseline, Divider,
+    Grid,
+    responsiveFontSizes, Stack,
+    ThemeProvider,
+    Typography
+} from "@mui/material";
 import Head from "next/head";
 import {LazyPlot} from "../components/article_page/plotly_figure";
 import "@code-hike/mdx/dist/index.css"
@@ -17,6 +26,10 @@ import {SessionProvider, useSession} from 'next-auth/react';
 import Protected from "../pages/protected";
 import createEmotionCache from "../utils/createEmotionCache";
 import {CacheProvider} from "@emotion/react";
+import * as PropTypes from "prop-types";
+import Link from "next/link";
+import {drawerSecondaryItemsParts} from "../components/drawer_items";
+import LiveIconComponent from "../components/live_icon_component";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -56,7 +69,11 @@ export const SkeletonContext = createContext();
 
 let lightTheme = createTheme({
     palette: {
-        mode: "light", primary: {
+        headerColor: `rgb(75, 75, 75)`,
+        footerColor: `rgb(55, 55, 55)`,
+
+        mode: "light",
+        primary: {
             main: '#2196f3',
         }, secondary: {
             main: '#ffc400',
@@ -64,7 +81,7 @@ let lightTheme = createTheme({
             main: '#64748B', contrastText: '#fff',
         }, text: {
             primary: '#000000',
-            secondary: '#4e5052',
+            secondary: '#c5c6c7',
             disabled: '#d0d0d0',
 
         }
@@ -75,6 +92,9 @@ lightTheme = responsiveFontSizes(lightTheme);
 
 let darkTheme = createTheme({
     palette: {
+        headerColor: `rgb(75, 75, 75)`,
+        footerColor: `rgb(55, 55, 55)`,
+
         mode: "dark",
         primary: {
             main: '#2196f3',
@@ -87,7 +107,7 @@ let darkTheme = createTheme({
         },
         text: {
             primary: '#ffffff',
-            secondary: '#939698',
+            secondary: '#c5c6c7',
             disabled: '#565555',
 
         }
@@ -97,6 +117,8 @@ let darkTheme = createTheme({
 darkTheme = responsiveFontSizes(darkTheme);
 
 
+
+FooterNewsComponent.propTypes = {activeTheme: PropTypes.any};
 export default function App({
                                 Component,
                                 emotionCache = clientSideEmotionCache,
@@ -231,15 +253,181 @@ export default function App({
                 </ThemeProvider>
             </CacheProvider>
 
-            {/*<footer>*/}
-            {/*    <Box bgcolor={activeTheme.palette.primary.dark}>*/}
-            {/*        <Typography variant={"subtitle2"} padding={'0.5rem'}>*/}
-            {/*            Many thanks to <strong>Vercel</strong>*/}
-            {/*        </Typography>*/}
-            {/*    </Box>*/}
-            {/*</footer>*/}
+            <footer>
+                <Grid container bgcolor={activeTheme.palette.footerColor} paddingY={'2rem'} paddingX={'2rem'}>
+                    <Grid item xs={12} sm={6} md={6} lg={3} padding={'0.5rem'}>
+                        <Typography
+                            color={'white'}
+                            variant={"h5"}
+                            textAlign={"left"}
+                            fontFamily={'monospace'}
+                        >
+                            RiskLab<b>AI</b>
+                        </Typography>
+                        <Typography
+                            paddingY={'0.5rem'}
+                            color={'white'}
+                            variant={"body2"}
+                            textAlign={"left"}
+                        >
+                            QuantEcon is a nonprofit organization dedicated to development and documentation of open
+                            source computational tools for economics, econometrics, and decision making.
+                        </Typography>
+                        <Typography
+                            paddingY={'1rem'}
+                            color={'white'}
+                            variant={"body2"}
+                            textAlign={"left"}
+                        >
+                            <b>SPONSORS</b>
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={6} lg={6} padding={'0.5rem'}>
+                        <Typography
+                            color={'white'}
+                            variant={"h6"}
+                            textAlign={"left"}
+                        >
+                            Lastest News
+                        </Typography>
+
+                        <Stack>
+                            <FooterNewsComponent
+                                title={"RSE Computational Economics Workshop"}
+                                date={"2 Feb 2023"}
+                                description={"On February 16 2023, QuantEcon hosted a workshop designed to introduce students and policy makers to modern scientific computing tools and their applications to economic problems."} theme={activeTheme}
+                            />
+                            <Divider />
+
+                            <FooterNewsComponent
+                                title={"RSE Computational Economics Workshop"}
+                                date={"2 Feb 2023"}
+                                description={"On February 16 2023, QuantEcon hosted a workshop designed to introduce students and policy makers to modern scientific computing tools and their applications to economic problems."} theme={activeTheme}
+                            />
+                            <Divider />
+
+                            <FooterNewsComponent
+                                title={"RSE Computational Economics Workshop"}
+                                date={"2 Feb 2023"}
+                                description={"On February 16 2023, QuantEcon hosted a workshop designed to introduce students and policy makers to modern scientific computing tools and their applications to economic problems."} theme={activeTheme}
+                            />
+                            <Divider />
+
+                            <Typography
+                                component={Link}
+                                href={"/home"}
+                                paddingTop={"0.5rem"}
+                                color={"white"}
+                                variant={"body1"}
+                                textAlign={"left"}
+                            >
+                                <b>View all news</b>
+                            </Typography>
+                        </Stack>
+                    </Grid>
+                    <Grid item xs={12} sm={3} md={3} lg={3} padding={'0.5rem'}>
+                        <Typography
+                            color={'white'}
+                            variant={"h5"}
+                            textAlign={"left"}
+                        >
+                            RisklabAI Links
+                        </Typography>
+                        <Stack>
+                            <Typography color={'white'} paddingY={'0.5rem'} paddingTop={'1rem'}>
+                                Home
+                            </Typography>
+
+                            <Typography color={'white'} paddingY={'0.5rem'}>
+                                About
+                            </Typography>
+                            <Typography color={'white'} paddingY={'0.5rem'}>
+                                News
+                            </Typography>
+
+                            <Typography color={'white'} paddingY={'0.5rem'}>
+                                Projects
+                            </Typography>
+                            <Typography color={'white'} paddingY={'0.5rem'}>
+                                Team
+                            </Typography>
+                            <Typography color={'white'} paddingY={'0.5rem'}>
+                                GitHub
+                            </Typography>
+
+                            <Typography color={'white'} paddingY={'0.5rem'}>
+                                Merchandise Store
+                            </Typography>
+
+                            <Typography color={'white'} paddingY={'0.5rem'}>
+                                Available Positions
+                            </Typography>
+                        </Stack>
+
+                        <Typography
+                            color={'white'}
+                            variant={"h5"}
+                            textAlign={"left"}
+                            paddingBottom={'1rem'}
+                        >
+                            Special Links
+                        </Typography>
+
+
+                        <ButtonGroup
+                        >
+
+                            {drawerSecondaryItemsParts.map((item) => {
+                                return (
+                                    <LiveIconComponent
+                                        key={item.title}
+                                        text={item.title}
+                                        icon={item.icon}
+                                        to={item.to}
+                                    />
+                                );
+                            })}
+
+                        </ButtonGroup>
+
+                    </Grid>
+                </Grid>
+            </footer>
         </>
     )
+}
+
+
+function FooterNewsComponent({title, date, description, theme}) {
+    return <>
+        <Typography
+            component={Link}
+            href={"/home"}
+            paddingTop={"0.5rem"}
+            color={"white"}
+            variant={"body1"}
+            textAlign={"left"}
+        >
+            {title}
+        </Typography>
+        <Typography
+            paddingY={"0rem"}
+            color={"white"}
+            variant={"body2"}
+            textAlign={"left"}
+        >
+            {date}
+        </Typography>
+        <Typography
+            paddingY={"0.5rem"}
+            color={theme.palette.text.secondary}
+
+            variant={"subtitle2"}
+            textAlign={"left"}
+        >
+            {description}
+        </Typography>
+    </>;
 }
 
 function Auth({children}) {

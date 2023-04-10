@@ -200,7 +200,7 @@ export default function Home(props) {
 
                                     }}
 
-                                    color={'white'} bgcolor={"red"} variant={"h5"} textAlign={"center"}>
+                                    color={'white'} variant={"h5"} textAlign={"center"}>
                                     Open source code for <b>Finance</b> modeling
                                 </Typography>
                             </Grid>
@@ -225,7 +225,8 @@ export default function Home(props) {
                                     marginLeft: 'auto',
                                     marginRight: 'auto',
 
-                                    backgroundColor: 'red',
+                                    color: 'white',
+                                    backgroundColor: 'black',
                                 }}>
                                     [Lectures-Label]
                                 </div>
@@ -263,7 +264,9 @@ export default function Home(props) {
                                     marginLeft: 'auto',
                                     marginRight: 'auto',
 
-                                    backgroundColor: 'red',
+
+                                    color: 'white',
+                                    backgroundColor: 'black',
                                 }}>
                                     [Lectures-Label]
                                 </div>
@@ -298,7 +301,7 @@ export default function Home(props) {
                                 marginLeft: 'auto',
                                 marginRight: 'auto',
 
-                                backgroundColor: 'red',
+                                backgroundColor: 'grey',
                             }}>
                                 [workshop image]
                             </div>
