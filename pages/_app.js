@@ -258,7 +258,7 @@ export default function App({
                     <Grid item xs={12} sm={6} md={6} lg={3} padding={'0.5rem'}>
                         <Typography
                             color={'white'}
-                            variant={"h5"}
+                            variant={"h4"}
                             textAlign={"left"}
                             fontFamily={'monospace'}
                         >
@@ -285,10 +285,10 @@ export default function App({
                     <Grid item xs={12} sm={6} md={6} lg={6} padding={'0.5rem'}>
                         <Typography
                             color={'white'}
-                            variant={"h6"}
+                            variant={"h5"}
                             textAlign={"left"}
                         >
-                            Lastest News
+                            Latest News
                         </Typography>
 
                         <Stack>
@@ -368,7 +368,7 @@ export default function App({
                             color={'white'}
                             variant={"h5"}
                             textAlign={"left"}
-                            paddingBottom={'1rem'}
+                            paddingY={'1rem'}
                         >
                             Special Links
                         </Typography>
