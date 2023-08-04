@@ -2,7 +2,8 @@ import * as React from 'react';
 import {useContext, useEffect, useState} from 'react';
 import Head from "next/head";
 import {SkeletonContext} from "../pages/_app";
-import SocrateImage from "../public/static/soc_wallpaper.jpg"
+// import SocrateImage from "../public/static/soc_wallpaper.jpg"
+import PurpleBG from "../public/static/purple_bg.jpg"
 import {useRouter} from "next/router";
 import Image from "next/image"
 // import Settings, {DefaultSettingsT} from './Settings';
@@ -125,7 +126,8 @@ export default function Home(props) {
                         style={{
                             zIndex: -1
                         }}
-                        src={SocrateImage.src}
+                        // src={SocrateImage.src}
+                        src={PurpleBG}
                         fill
                         alt={"background-welcome-image"}
                     />
@@ -169,7 +171,7 @@ export default function Home(props) {
                                     padding: '1rem',
                                     marginRight: "auto",
                                 }}>
-                                    <Image src={'/static/quant_econ.png'} alt={'label'} fill/>
+                                    <Image src={'/static/risklabai_logo.png'} alt={'label'} fill/>
                                 </div>
                             </Grid>
 
@@ -201,7 +203,8 @@ export default function Home(props) {
                                     }}
 
                                     color={'white'} variant={"h5"} textAlign={"center"}>
-                                    Open source code for <b>Finance</b> modeling
+                                    {/*Open source code for <b>Finance</b> modeling*/}
+                                    The implementation of Artificial Intelligence (AI) in <b>quantitative finance</b>
                                 </Typography>
                             </Grid>
                         </Grid>
@@ -210,8 +213,10 @@ export default function Home(props) {
 
                 </div>
 
-                <Grid container paddingY={'4rem'} bgcolor={"#0878a8"}>
-                    <Grid item xs={12} sm={6} md={6} lg={6} bgcolor={"gray"} padding={'2rem'}>
+                {/*<Grid container paddingY={'4rem'} bgcolor={"#0878a8"}>*/}
+                <Grid container paddingY={'4rem'} bgcolor={"white"}>
+
+                    <Grid item xs={12} sm={6} md={6} lg={6} bgcolor={"white"} padding={'2rem'}>
                         <div style={{
                             display: "flex",
                             flexDirection: "row",
@@ -233,16 +238,17 @@ export default function Home(props) {
                             </div>
 
                             <Stack spacing={'0.5rem'}
-                                   style={{width: '70%', backgroundColor: "darkgrey", padding: '0.5rem'}}>
+                                   style={{width: '70%', backgroundColor: "white", padding: '0.5rem'}}>
                                 <Typography variant={"h4"} textAlign={"left"}>
                                     Lectures
                                 </Typography>
-                                <Typography variant={"body2"} textAlign={"start"}>
-                                    QuantEcon hosts lecture series on economics, finance, econometrics and data science.
-                                    All lecture series are based on open source languages and open computing
-                                    environments.
+                                <Typography variant={"body2"} textAlign={"justify"}>
+                                    {/*QuantEcon hosts lecture series on economics, finance, econometrics and data science.*/}
+                                    {/*All lecture series are based on open source languages and open computing*/}
+                                    {/*environments.*/}
+                                    <b>RiskLabAI</b> hosts finance and data science lectures, emphasizing open source tech. Collaborative learning and knowledge-sharing occur in an open computing setting, leveraging open source languages and tools to drive innovation and progress in the interconnected fields.
                                 </Typography>
-                                <Button padding={0} variant={"contained"}>
+                                <Button padding={0} variant={"contained"} >
                                     Browse lectures
                                 </Button>
                             </Stack>
@@ -273,13 +279,14 @@ export default function Home(props) {
                             </div>
 
                             <Stack spacing={'0.5rem'}
-                                   style={{width: '70%', backgroundColor: "darkgrey", padding: '0.5rem'}}>
+                                   style={{width: '70%', backgroundColor: "white", padding: '0.5rem'}}>
                                 <Typography variant={"h4"} textAlign={"left"}>
                                     Code Libraries
                                 </Typography>
-                                <Typography variant={"body2"} textAlign={"start"}>
-                                    QuantEcon has developed and maintains high-performance, open source, code libraries
-                                    in Python and Julia.
+                                <Typography variant={"body2"} textAlign={"justify"}>
+                                    {/*QuantEcon has developed and maintains high-performance, open source, code libraries*/}
+                                    {/*in Python and Julia.*/}
+                                    <b>RiskLabAI</b> develops and maintains efficient, free, and open-source code libraries in Python and Julia for finance and related applications. Professionals, researchers, and academics benefit from these resources, which support the development of sophisticated computational tools.
                                 </Typography>
                                 <Button padding={0} variant={"contained"}>
                                     View libraries
@@ -291,8 +298,8 @@ export default function Home(props) {
                     </Grid>
                 </Grid>
 
-                <Grid container paddingY={'4rem'} bgcolor={"#00b2ff"}>
-                    <Grid item xs={12} sm={6} md={6} lg={6} bgcolor={"white"} padding={'2rem'}>
+                <Grid container paddingY={'4rem'} bgcolor={"lightgrey"}>
+                    <Grid item xs={12} sm={6} md={6} lg={6} bgcolor={"lightgrey"} padding={'2rem'}>
 
                         <div style={{width: '100%',}}>
                             <div style={{
@@ -301,15 +308,15 @@ export default function Home(props) {
                                 marginLeft: 'auto',
                                 marginRight: 'auto',
 
-                                backgroundColor: 'grey',
+                                backgroundColor: 'lightgray',
                             }}>
-                                [workshop image]
+                                <img src={"/static/mesh-gradient2.png"} width={"100%"} height={"100%"} />
                             </div>
                         </div>
 
 
                     </Grid>
-                    <Grid item xs={12} sm={6} md={6} lg={6} bgcolor={"grey"} padding={'2rem'}>
+                    <Grid item xs={12} sm={6} md={6} lg={6} bgcolor={"lightgrey"} padding={'2rem'}>
                         <div style={{
                             display: "flex",
                             flexDirection: "row",
@@ -317,22 +324,17 @@ export default function Home(props) {
                             alignItems: 'start'
                         }}>
                             <Stack spacing={'0.5rem'}
-                                   style={{width: '90%', backgroundColor: "darkgrey", padding: '0.5rem'}}>
+                                   style={{width: '90%', backgroundColor: "lightgrey", padding: '0.5rem'}}>
                                 <Typography variant={"h4"} textAlign={"left"}>
                                     Workshop
                                 </Typography>
                                 <Typography variant={"body2"} textAlign={"start"}>
-                                    QuantEcon runs remote and in-person workshops and short courses on quantitative
-                                    economics and high-performance computing using Python and Julia.
+                                    RiskLabAI offers workshops and short courses on quantitative economics and high-performance computing using Python and Julia, both remotely and in-person. These courses have been held at various prestigious locations worldwide, including top universities and central banks.
                                     <br/>
                                     <br/>
-
-                                    Past locations include the Econometric Society meetings, Columbia University,
-                                    Copenhagen, the Reserve Bank of Australia, Stanford, Princeton, Harvard, MIT,
-                                    Berkeley, UCLA, Paris and the Central Bank of Chile.
-
+                                    Past venues include the Econometric Society meetings, Columbia University, Copenhagen, the Reserve Bank of Australia, Stanford, Princeton, Harvard, MIT, Berkeley, UCLA, Paris, and the Central Bank of Chile.
                                 </Typography>
-                                <Button padding={0} variant={"contained"}>
+                                <Button variant={"contained"}>
                                     Contact us
                                 </Button>
                             </Stack>
@@ -342,17 +344,17 @@ export default function Home(props) {
                     </Grid>
                 </Grid>
 
-                <Grid container bgcolor={"white"} paddingY={"4rem"} paddingX={"4rem"}>
-                    <Grid item xs={12} sm={12} md={12} lg={12} padding={'0.75rem'}>
-                        <Typography variant={"h3"} textAlign={"center"}>
-                            Research and Publications
-                        </Typography>
-                    </Grid>
+                {/*<Grid container bgcolor={"white"} paddingY={"2rem"} paddingX={"4rem"}>*/}
+                {/*    <Grid item xs={12} sm={12} md={12} lg={12} padding={'0.75rem'}>*/}
+                {/*        <Typography variant={"h3"} textAlign={"center"}>*/}
+                {/*            Research and Publications*/}
+                {/*        </Typography>*/}
+                {/*    </Grid>*/}
 
-                </Grid>
+                {/*</Grid>*/}
 
 
-                <Grid container bgcolor={"grey"} paddingY={'4rem'} paddingX={'4rem'}>
+                <Grid container bgcolor={"white"} paddingY={'4rem'} paddingX={'4rem'}>
                     <Grid item xs={12} sm={12} md={12} lg={12} padding={'0.75rem'}>
                         <Typography variant={"h3"} textAlign={"center"}>
                             Projects
@@ -364,7 +366,7 @@ export default function Home(props) {
                         key={"1"}
                         imageSource={"/static/lectures.png"}
                         title={"Lectures Series"}
-                        description={"QuantEcon hosts lecture series on economics, finance, econometrics and data science."}
+                        description={"RiskLabAI organizes and hosts a series of lectures that cover topics such as finance and data science."}
                         theme={theme}
 
                     />
@@ -374,7 +376,7 @@ export default function Home(props) {
                         key={"2"}
                         imageSource={"/static/lectures.png"}
                         title={"Code"}
-                        description={"QuantEcon has developed and maintains high-performance, open source, code libraries in Python and Julia."}
+                        description={"RiskLabAI has developed and maintains high-performance, open source, code libraries in Python and Julia."}
                         theme={theme}
 
                     />
@@ -384,7 +386,7 @@ export default function Home(props) {
                         key={"3"}
                         imageSource={"/static/lectures.png"}
                         title={"Textbooks"}
-                        description={"A series of high quality hardcopy textbooks on topics in computational economics and economic dynamics."}
+                        description={"A collection of premium printed textbooks covering subjects in quantitative finance."}
                         theme={theme}
                     />
 
@@ -393,17 +395,17 @@ export default function Home(props) {
                         key={"4"}
                         imageSource={"/static/lectures.png"}
                         title={"QE Notes"}
-                        description={"QuantEcon Notes is a platform which hosts an open Jupyter notebook library with a focus on economics and finance."}
+                        description={"RiskLabAI Notes provides a hub for sharing open-source Jupyter notebooks focused on quantitative finance."}
                         theme={theme}
                     />
 
-                    <ProjectSectionComponent
-                        key={"5"}
-                        imageSource={"/static/lectures.png"}
-                        title={"Executable Books"}
-                        description={"QuantEcon a founding member of the Executable Books Project, which develops Jupyter Book."}
-                        theme={theme}
-                    />
+                    {/*<ProjectSectionComponent*/}
+                    {/*    key={"5"}*/}
+                    {/*    imageSource={"/static/lectures.png"}*/}
+                    {/*    title={"Executable Books"}*/}
+                    {/*    description={"QuantEcon a founding member of the Executable Books Project, which develops Jupyter Book."}*/}
+                    {/*    theme={theme}*/}
+                    {/*/>*/}
 
                     <Grid item xs={12} sm={12} md={12} lg={12} padding={'0.75rem'}
                           style={{
@@ -417,10 +419,10 @@ export default function Home(props) {
                     </Grid>
                 </Grid>
 
-                <Grid container bgcolor={"white"} paddingY={'2.25rem'} paddingX={'2rem'}>
+                <Grid container bgcolor={"lightgrey"} paddingY={'2.25rem'} paddingX={'2rem'}>
                     <Grid item xs={12} sm={12} md={12} lg={12} padding={'1.75rem'}>
                         <Typography variant={"h3"} textAlign={"center"}>
-                            Working for QuantEcon
+                            Working for RiskLab<b>AI</b>
                         </Typography>
                     </Grid>
 
@@ -527,7 +529,7 @@ const WorkersComponent = ({theme,}) => {
                     width: "25%",
                 }}>
                     <div style={{
-                        padding: "1rem",
+                        padding: "0.25rem",
                         aspectRatio: "1/1",
                         marginLeft: "auto",
                         marginRight: "auto",
@@ -559,7 +561,7 @@ const WorkersComponent = ({theme,}) => {
                     spacing={"0.5rem"}
                     width={"auto"}
                     style={{
-                        backgroundColor: "grey", padding: "0.5rem"
+                        backgroundColor: "lightgrey", padding: "0.5rem"
                     }}
                 >
                     <Typography variant={"h5"} textAlign={"start"}>
@@ -572,7 +574,7 @@ const WorkersComponent = ({theme,}) => {
             </div>
 
             <Typography variant={"body1"} padding={"1rem"} textAlign={"justify"}>
-                Flint is a QuantEcon research assistant and student in Economics at Stanford University. His primary
+                S.Alireza Mousavizade is a RiskLabAI research assistant and student in Economics at Stanford University. His primary
                 interest is in macro-finance and mathematical economics. Flint is working to understand the nature
                 of
                 default and debt as amplification mechanisms in the macroeconomy. He is also a research assistant

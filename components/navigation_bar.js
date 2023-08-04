@@ -88,23 +88,6 @@ function ScrollTop(props) {
     );
 }
 
-// functi`on ElevationScroll(props) {
-//     const {children, window, theme} = props;
-//     // Note that you normally won't need to set the window ref as useScrollTrigger
-//     // will default to window.
-//     // This is only being set here because the demo is in an iframe.
-//     const trigger = useScrollTrigger({
-//         disableHysteresis: true,
-//         threshold: 50,
-//         target: window ? window() : undefined,
-//     });
-//
-//     return React.cloneElement(children, {
-//         style: {
-//             backgroundColor: trigger ? theme.palette.primary.main : `rgba(255, 255, 255, 0)`,
-//         }
-//     });
-// }
 
 function getCurrentTabTitle(router) {
     const pathname = router.pathname;
@@ -204,13 +187,16 @@ function NavBarDrawerComponent(props) {
                                     }}
                                 >
                                     <ListItemIcon><ResponsiveIcon icon={item.icon}/></ListItemIcon>
-                                    <ListItemText primary={item.title}/>
+                                    <ListItemText>
+                                        <Typography>
+                                            {item.title}
+                                        </Typography>
+                                    </ListItemText>
                                 </ListItemButton>
                             </Link>
                         </ListItem>
 
                     );
-                    ``
                 })}
 
                 <Divider sx={{my: 1}}/>
@@ -267,8 +253,6 @@ function NavBarDrawerComponent(props) {
                 <ButtonGroup>
 
                     <Button
-                        // component={Link}
-                        // href={"/auth/sign_up"}
                         variant={trigger ? "contained" : "outlined"}
                         color={"success"}
                         size={isMobileSizeScreen ? "small" : "medium"}
@@ -284,9 +268,6 @@ function NavBarDrawerComponent(props) {
                     </Button>
 
                     <Button
-                        // component={Link}
-                        // href={"/api/auth/signin"}
-                        // href={"/auth/sign_in"}
                         variant={"outlined"}
                         size={isMobileSizeScreen ? "small" : "medium"}
                         // onClick={() => signIn()}
@@ -367,44 +348,17 @@ function NavBarDrawerComponent(props) {
 
                     </Menu>
                 </Box>
-                {/*<Typography>*/}
-                {/*    {session.user.name} ({session.user.email}) {session.user.image}*/}
-                {/*</Typography>*/}
-                {/*<Link href={pathname} key={pathname}>*/}
-                {/*    <Button*/}
-                {/*        sx={{*/}
-                {/*            "&:hover": {*/}
-                {/*                backgroundColor: "grey",*/}
-                {/*            }*/}
-                {/*        }}*/}
-                {/*        style={{*/}
-                {/*            borderBottomWidth: 3,*/}
-                {/*            borderBottomColor: isActive(pathname) ? theme.palette.text.primary : `rgba(255, 255, 255, 0)`,*/}
-                {/*            borderStyle: "solid",*/}
-                {/*            borderRadius: 0,*/}
-                {/*            color: isActive(pathname) ? theme.palette.text.primary : alpha(theme.palette.text.primary, 0.7),*/}
-                {/*        }}*/}
-                {/*        onClick={(e) => {*/}
-                {/*        }}*/}
-                {/*    >*/}
-                {/*        <Typography*/}
-                {/*            color={theme.palette.text.primary}*/}
-                {/*        >*/}
-                {/*            Drafts*/}
-                {/*        </Typography>*/}
-                {/*    </Button>*/}
-                {/*</Link>*/}
             </>
         );
     }
-    ////////////////////////////////////////////////////////////////////////////////
 
     return (
         <React.Fragment>
             <AppBar enableColorOnDark
                     sx={{
                         transition: 'all 0.5s ease-in-out',
-                        backgroundColor: trigger ? theme.palette.headerColor : `rgba(255, 255, 255, 0)`
+                        // nav color
+                        backgroundColor: trigger ? grey["900"] : `rgba(255, 255, 255, 0)`
                     }}
                     elevation={0}
                     padding={0}
@@ -430,17 +384,18 @@ function NavBarDrawerComponent(props) {
 
                         <Icon
                             sx={{
-                                mr: 3,
-                                height: `calc( ${props.navBarHeight} - 5vh )`,
-                                width: `calc( 2 * (${props.navBarHeight} - 5vh) )`,
+                                mr: 2,
+                                height: `calc(${props.navBarHeight} - 3vh)`,
+                                width: `calc(${props.navBarHeight} - 3vh)`,
                                 display: {xs: 'none', sm: 'flex'},
                             }}
                         >
                             <img style={{
                                 display: 'flex',
-                                height: 'inherit',
-                                width: 'inherit'
-                            }} src="/static/quant_econ.png"/>
+                                // height: '100%',
+                                // width: '100%',
+                                // backgroundColor: "black",
+                            }} src="/static/risklabai_logo.png"/>
                         </Icon>
 
                     </Fade>
@@ -510,23 +465,6 @@ function NavBarDrawerComponent(props) {
                     </Box>
 
 
-                    {/*{element}*/}
-
-                    {/*<Tooltip title="Change theme">*/}
-                    {/*    <IconButton*/}
-                    {/*        onClick={props.toggleTheme}*/}
-                    {/*        sx={{*/}
-                    {/*            alignSelf: "right",*/}
-                    {/*            marginLeft: "auto",*/}
-                    {/*        }}*/}
-                    {/*    >*/}
-                    {/*        {props.selectedTheme === "dark" ? (*/}
-                    {/*            <ResponsiveIcon icon={Brightness4Icon} sx={{color: theme.palette.text.primary}}/>*/}
-                    {/*        ) : (*/}
-                    {/*            <ResponsiveIcon icon={Brightness7Icon} sx={{color: theme.palette.text.primary}}/>*/}
-                    {/*        )}*/}
-                    {/*    </IconButton>*/}
-                    {/*</Tooltip>*/}
                 </Toolbar>
             </AppBar>
             <Box component="nav">
@@ -536,7 +474,7 @@ function NavBarDrawerComponent(props) {
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
                     ModalProps={{
-                        keepMounted: true, // Better open performance on mobile.
+                        keepMounted: true,
                     }}
                     sx={{
                         display: {xs: 'block', sm: 'none'},

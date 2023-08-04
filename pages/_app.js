@@ -65,8 +65,9 @@ const skeletonReducer = (state, action) => {
     }
 }
 
-export const SkeletonContext = createContext();
 
+export const SkeletonContext = createContext();
+import { purple, pink } from '@mui/material/colors';
 let lightTheme = createTheme({
     palette: {
         headerColor: `rgb(75, 75, 75)`,
@@ -74,9 +75,10 @@ let lightTheme = createTheme({
 
         mode: "light",
         primary: {
-            main: '#2196f3',
+            // main: '#2196f3',
+            main: purple["800"]
         }, secondary: {
-            main: '#ffc400',
+            main: pink["800"],
         }, neutral: {
             main: '#64748B', contrastText: '#fff',
         }, text: {
@@ -270,7 +272,7 @@ export default function App({
                             variant={"body2"}
                             textAlign={"left"}
                         >
-                            QuantEcon is a nonprofit organization dedicated to development and documentation of open
+                            RiskLabAI is a nonprofit organization dedicated to development and documentation of open
                             source computational tools for economics, econometrics, and decision making.
                         </Typography>
                         <Typography
