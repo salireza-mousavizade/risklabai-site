@@ -83,6 +83,7 @@ let lightTheme = createTheme({
             main: '#64748B', contrastText: '#fff',
         }, text: {
             primary: '#000000',
+
             secondary: '#c5c6c7',
             disabled: '#d0d0d0',
 
