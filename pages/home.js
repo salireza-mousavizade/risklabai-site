@@ -342,6 +342,16 @@ export default function Home(props) {
                     </Grid>
                 </Grid>
 
+                <Grid container bgcolor={"white"} paddingY={"4rem"} paddingX={"4rem"}>
+                    <Grid item xs={12} sm={12} md={12} lg={12} padding={'0.75rem'}>
+                        <Typography variant={"h3"} textAlign={"center"}>
+                            Research and Publications
+                        </Typography>
+                    </Grid>
+
+                </Grid>
+
+
                 <Grid container bgcolor={"grey"} paddingY={'4rem'} paddingX={'4rem'}>
                     <Grid item xs={12} sm={12} md={12} lg={12} padding={'0.75rem'}>
                         <Typography variant={"h3"} textAlign={"center"}>
@@ -441,6 +451,17 @@ export default function Home(props) {
                         </Button>
                     </Grid>
                 </Grid>
+
+                <Grid container bgcolor={"white"} paddingY={"4rem"} paddingX={"4rem"}>
+                    <Grid item xs={12} sm={12} md={12} lg={12} padding={'0.75rem'}>
+                        <Typography variant={"h3"} textAlign={"center"}>
+                            Contact Us
+                        </Typography>
+                    </Grid>
+
+                </Grid>
+
+
 
             </div>
 

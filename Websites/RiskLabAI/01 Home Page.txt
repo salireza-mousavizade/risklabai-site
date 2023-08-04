@@ -1,0 +1,36 @@
+**[Header: RiskLabAI - High-performance financial intelligence at its best]**
+
+**Introduction to RiskLabAI and its mission** (can be similar to https://www.robeco.com/en-int/)
+
+picture of luis Seco with the caption "Luis Seco, Head of RiskLab Global and Director of RiskLab Toronto"
+picture of Hamid Arian with the caption "Hamid Arian, Director of RiskLab AI and RiskLab Middle East"
+
+Welcome to RiskLabAI, a leading platform dedicated to advancing the use of Artificial Intelligence (AI) in quantitative finance. Our mission is to provide tailored and open-source solutions to the financial community, promoting responsible and reproducible research accompanied by rigorous validation and efficient cooperation in high-performance environments.
+
+**Tailored and Open-Source Solutions**
+
+At RiskLabAI, we offer both tailored solutions and open-source libraries to cater to the diverse needs of the financial industry. Our team of quants, comprising experts from pure mathematics, theoretical physics, and computer science backgrounds, is equipped with the knowledge and experience to develop cutting-edge AI models specifically designed for quantitative finance.
+
+**Promoting Responsible and Reproducible Research**
+
+We understand the financial industry's importance of rigorous replication, reproducibility, and validation. While academic peer review may be prone to biases, RiskLabAI focuses on producing responsible and reproducible research. We prioritize transparency and accuracy, ensuring our AI models and methodologies can withstand scrutiny and deliver reliable results.
+
+**Efficient Cooperation in High-Performance Environments**
+
+Collaboration is at the core of our approach. RiskLabAI facilitates efficient cooperation among researchers, practitioners, and industry experts, enabling the seamless sharing of knowledge, ideas, and best practices. With a focus on high-performance environments, we leverage the power of advanced computing technologies to accelerate research and analysis in quantitative finance.
+
+**Fully Open-Source Libraries**
+
+RiskLabAI is proud to provide two fully open-source libraries in the Julia and Python programming languages. These libraries are powerful quantitative finance tools, enabling researchers and practitioners to leverage AI techniques effectively. Our open-source approach encourages transparency, collaboration, and innovation within the financial community.
+
+**Join Our Team of Experts**
+
+Our team at RiskLabAI comprises talented quants who have excelled in international scientific competitions such as the International Mathematical Olympiad (IMO) and the International Physics Olympiad (IPO). Their diverse backgrounds in pure mathematics, theoretical physics, and computer science ensure a multidisciplinary approach to solving complex problems in quantitative finance.
+
+**Unlock the Potential of AI in Quantitative Finance**
+
+Discover the power of AI in quantitative finance with RiskLabAI. Explore our tailored solutions, leverage our open-source libraries, and join our community of researchers and practitioners. Together, we can drive innovation, foster responsible research, and revolutionize how we approach finance.
+
+
+
+**[Footer: Contact Us | Privacy Policy | Terms of Service | Social Media Links | RiskLab AI | RiskLab, University of Toronto | RiskLab Middle East | Quant Econ Community | Julia Community | Python Community]**
